@@ -3,109 +3,7 @@
   <head>
     <title> 저장소 </title>
     <meta charset="UTF-8">
-    <style>
-      @charset "UTF-8";
-
-      /*공통부분*/
-      html{
-        margin: 0 auto;
-      }
-
-      body{
-        list-style: none;
-        font-family: "나눔고딕", NanumGothic, "맑은 고딕", MalgunGothic, "Apple SD Gothic Neo", sans-serif;
-        max-width: 100%;
-        margin: 0 auto;
-      }
-
-      ol, ul{
-        list-style: none;
-        padding-left: 0px;
-      }
-
-      .header{
-        width: 100%;
-        margin: inherit;
-        display: block;
-        position: absolute;
-        /*opacity: 0;*/
-      }
-
-      .header .banner{/*상단 고정바 속성*/
-        position: fixed;
-        background-color: white;
-        color: black;
-        width: inherit;
-        line-height: 2em;
-        list-style: inherit;
-        display: flex;
-        justify-content: space-between;
-        z-index: 2;
-      }
-      .header .banner h1{
-        padding-left: 5%;
-      }
-      .header .banner nav{
-        padding-right: 5%;
-        list-style: none;
-      }
-      .header .banner nav ul li a{
-        text-decoration: none;
-      }
-      .header .banner nav ul li{
-        list-style: none;
-      }
-      #menu_button{/*메뉴버튼 속성*/
-        color: black;
-        font-size: 18px;
-        font-family: "나눔고딕";
-      }
-      /*메뉴바*/
-      .header .banner .open_menu{/*메뉴 내부 속성*/
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        right: 0;
-        background-color: white;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-      }
-      .header .banner .open_menu ul li{
-        list-style: none;
-      }
-      .header .banner .open_menu ul li a{
-        margin: 0 auto;
-        padding: 16px 0 14px;
-        font-size: 20px;
-        color: gray;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: 0.3s;
-        list-style: inherit;
-        text-decoration: inherit;
-        z-index: inherit;
-      }
-      .header .banner .open_menu ul li a:hover{ /*메뉴 선택시 마우스포인트에 따라 강조*/
-        color: black;
-        z-index: inherit;
-      }
-      .header .banner .open_menu #closebtn{
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 25px;
-        z-index: inherit;
-      }
-      @media screen and (max-height: 450px){/*메뉴 열고 닫기 애니메이션 속성*/
-        .open_menu{padding-top: 15px;}
-        .open_menu li {font-size: 18px;}
-      }
-    </style>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     
@@ -134,17 +32,6 @@
       </div>
     </header>
     
-    <script>
-      //메뉴바 열고 닫기
-      function openNav(){
-        document.getElementById("open_menu").style.width = "250px"; //메뉴 버튼이 눌릴 시
-      }
-      function closeNav(){
-        document.getElementById("open_menu").style.width = "0";//X버튼이 눌릴 시
-      }
-      //이벤트 생성
-      document.getElementById("menu_button").addEventListener("click", openNav);
-      document.getElementById("closebtn").addEventListener("click", closeNav);
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
